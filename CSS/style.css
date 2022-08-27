@@ -1,0 +1,106 @@
+:root {
+    --color-white: #fff;
+    --color-dark1: #272727;
+    --color-dark2: #000; 
+    --color-dark3: #2d2d2d; /*Color var*/
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+}
+
+.img_log_header{
+    width: 45px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--color-dark3);
+    box-shadow:  1px 1px 4px var(--color-dark2);
+    height: 3.5em; /*1em == 16px*/
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.navi_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    z-index: 2;
+}
+
+
+.navi_header a {
+    text-decoration: none;
+    color: var(--color-white);
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+
+.navi_header a:hover {
+    color: var(--color-dark2);
+    transition: all;
+    background-color: var(--color-white);
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.content {
+    text-align: center;
+    padding-top: 5em;
+    height: 100vh;
+    transition: 1s;
+
+}
+
+.btn_icon_header {
+   display: none;
+   background-color: transparent;
+   border: none;
+   color: var(--color-white);
+   cursor: pointer;
+}
+
+.btn_icon_header:hover {
+    color: var(--color-dark2);
+    transition: 0.5s;
+    background-color: var(--color-white);
+    border-radius: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .btn_icon_header {
+        display: block;
+    }
+    .navi_header {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-dark3);
+        height: 100%;
+        width: 30vw; /*1 VW = 1% of the viewport’s width (or 4.8px)*/
+        padding: 16px;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+} /*Propriedade CSS para dar uma condição a tela*/
+
+@keyframes showSidebar {
+    from {margin-left: -100vw;} /*Saida*/
+    top {margin-left: -10vw;} /*Chegada*/
+} /*Criação de animação.*/
