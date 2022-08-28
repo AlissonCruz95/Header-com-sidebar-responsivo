@@ -4,22 +4,22 @@ let content = document.getElementById('content')
 let showSidebar = false
 
 function toogleSidebar() {
-    showSidebar = !showSidebar //alterar de True pra False ou ao contrario.
+    showSidebar = !showSidebar 
     console.log(showSidebar)
     if (showSidebar) {
        naviHeader.style.marginLeft = '-10vw' //true.
        naviHeader.style.animationName = 'showSidebar' //animation CSS.
-       content.style.filter = 'blur(2px)' //efeito de borrado ao abrir a navibar.
+       content.style.filter = 'blur(2px)'
     } else {
         naviHeader.style.marginLeft = '-100vw'//false.
         naviHeader.style.animationName = '' //animation CSS.
-        content.style.filter = '' //remova o efeito de borrado.
+        content.style.filter = '' 
     }
 }
 
 function closeSideBar() {
     if(showSidebar) {
-        toogleSidebar() //Se tiver aberto, feche.
+        toogleSidebar() //if open, close
     }
 }
 
@@ -27,4 +27,4 @@ window.addEventListener('resize', function(event){
     if(window.innerWidth > 768 && showSidebar == true) {
         toogleSidebar()
     }
-}) //corrige o bug da tela com o borrado e o tamnho da tela.
+}) //bug fix
