@@ -98,9 +98,9 @@ body {
         animation-duration: 1s;
         margin-left: -100vw;
     }
-} /*Propriedade CSS para dar uma condição a tela*/
+} /*condition the screen*/
 
 @keyframes showSidebar {
-    from {margin-left: -100vw;} /*Saida*/
-    top {margin-left: -10vw;} /*Chegada*/
-} /*Criação de animação.*/
+    from {margin-left: -100vw;} /*exit*/
+    top {margin-left: -10vw;} /*arrival*/
+} /*animation creation.*/
